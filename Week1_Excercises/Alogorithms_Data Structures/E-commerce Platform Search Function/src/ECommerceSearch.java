@@ -3,7 +3,6 @@ import java.util.Comparator;
 
 public class ECommerceSearch {
 
-    // Linear Search - O(n)
     public static Product linearSearch(Product[] products, String productName) {
         for (Product product : products) {
             if (product.productName.equalsIgnoreCase(productName)) {
@@ -13,7 +12,6 @@ public class ECommerceSearch {
         return null;
     }
 
-    // Binary Search - O(log n)
     public static Product binarySearch(Product[] products, String productName) {
         int low = 0, high = products.length - 1;
 
@@ -32,7 +30,7 @@ public class ECommerceSearch {
         return null;
     }
 
-    // Utility to sort by productName for binary search
+    
     public static void sortProductsByName(Product[] products) {
         Arrays.sort(products, Comparator.comparing(p -> p.productName));
     }
